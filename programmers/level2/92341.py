@@ -6,7 +6,7 @@ https://programmers.co.kr/learn/courses/30/lessons/92341
 import datetime
 import math
 
-last_time = datetime.datetime.strptime('23:59', '%H:%M')
+LAST_TIME = datetime.datetime.strptime('23:59', '%H:%M')
 
 
 def solution(fees, records):
@@ -26,7 +26,7 @@ def solution(fees, records):
     for k in sorted(cars.keys()):
         v = cars[k]
         if v[1] is not None:
-            v[0] += int((last_time - v[1]).total_seconds()) // 60
+            v[0] += int((LAST_TIME - v[1]).total_seconds()) // 60
         fee = default_fee
         if v[0] > default_time:
             fee += math.ceil((v[0] - default_time) / unit_time) * unit_fee
