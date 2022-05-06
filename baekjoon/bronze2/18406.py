@@ -1,5 +1,6 @@
 """
 럭키 스트레이트
+https://www.acmicpc.net/problem/18406
 """
 
 
